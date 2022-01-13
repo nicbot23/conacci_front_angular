@@ -1,0 +1,118 @@
+<br>
+<div class="container">
+
+<h1><strong>Listado Accidentes </strong></h1>
+<br>
+<div class="row justify-content-end">
+    <button class="btn btn-outline-warning col-2" type="button" [routerLink] = "['/reportarAccidente']">Reportar Accidente</button>
+  </div>
+   <br>
+<!-- table prime ng-->
+<!--<p-table #dt [columns]="cols" [value]="accidentes" selectionMode="multiple"  [paginator]="true" [rows]="10">
+  <ng-template pTemplate="caption">
+      <div class="ui-helper-clearfix" style="text-align: left">
+        <button type="button" pButton icon="pi pi-file-o" iconPos="left" label="CSV"  style="margin-right: 0.5em;"></button>
+        <button type="button" pButton icon="pi pi-file-excel" iconPos="left" label="EXCEL"  style="margin-right: 0.5em;" class="ui-button-success"></button>
+        <button type="button" pButton icon="pi pi-file-pdf" iconPos="left" label="PDF"  class="ui-button-warning"></button>
+        <button type="button" pButton icon="pi pi-file" iconPos="left" label="CSV - Selection Only"  style="float:right"></button>
+      </div>
+  </ng-template>
+  <ng-template pTemplate="header" let-columns>
+      <tr>
+          <th *ngFor="let col of columns">
+              {{col.header}}
+          </th>
+      </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-rowData let-columns="columns">
+      <tr [pSelectableRow]="rowData">
+          <td *ngFor="let col of columns">
+              {{rowData[col.field]}}
+          </td>
+      </tr>
+  </ng-template>
+</p-table> -->
+
+<h3>Accidentes de la vía Popayan - santander de Quilichao</h3>
+<p-table [columns]="cols" [value]="accidentes" [paginator]="true" [rows]="10" [showCurrentPageReport]="true"
+    currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries">
+    <ng-template pTemplate="header" let-columns>
+        <tr>
+            <th *ngFor="let col of columns">
+                {{col.header}}
+            </th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-rowData let-columns="columns">
+        <tr>
+            <td *ngFor="let col of columns">
+                {{rowData[col.field]}}
+            </td>
+        </tr>
+    </ng-template>
+</p-table>
+
+<h3>Programmatic Control</h3>
+<div style="margin-bottom: 1em">
+    <button type="button" pButton icon="pi pi-chevron-left" (click)="prev()" style="margin-right:.5em" [disabled]="isFirstPage()"></button>
+    <button type="button" pButton icon="pi pi-refresh" (click)="reset()" style="margin-right:.5em"></button>
+    <button type="button" pButton icon="pi pi-chevron-right" (click)="next()" [disabled]="isLastPage()"></button>
+</div>
+<p-table [columns]="cols" [value]="accidentes" [paginator]="true" [rows]="rows" [showCurrentPageReport]="true" [(first)]="first"
+    currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries">
+    <ng-template pTemplate="header" let-columns>
+        <tr>
+            <th *ngFor="let col of columns">
+                {{col.header}}
+            </th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-rowData let-columns="columns">
+        <tr>
+            <td *ngFor="let col of columns">
+                {{rowData[col.field]}}
+            </td>
+        </tr>
+    </ng-template>
+</p-table>
+
+<!--  <br>
+            <table class="table table-bordered" >
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Carretera</th>
+                    <th scope="col">Abscisado</th>
+                    <th scope="col">Latitud</th>
+                    <th scope="col">Longitud</th>
+                    <th scope="col">Victimas</th>
+                    <th scope="col">Heridos Leves</th>
+                    <th scope="col">Heridos Graves</th>
+                    <th scope="col">Muertos</th>
+                    <th scope="col">Dia semana</th>
+                    <th scope="col">Fecha</th>
+                    <th scope="col">Hora</th>
+
+                  </tr>
+                </thead>
+                <tbody *ngFor="let accidente of accidentes">
+                  <tr>
+                    <th scope="row">{{accidente.id}}</th>
+                    <th >{{accidente.carretera}}</th>
+                    <td>{{accidente.abscisado}}</td>
+                    <td>{{accidente.latitud}}</td>
+                    <td>{{accidente.longitud}}</td>
+                    <td>{{accidente.victimas}}</td>
+                    <td>{{accidente.heridosLeves}}</td>
+                    <td>{{accidente.heridosGraves}}</td>
+                    <td>{{accidente.muertos}}</td>
+                    <td>{{accidente.diaSemana}}</td>
+                    <td>{{accidente.fecha}}</td>
+                    <td>{{accidente.hora}}</td>
+                  </tr>
+                </tbody>
+              </table>
+            -->
+
+
+</div>

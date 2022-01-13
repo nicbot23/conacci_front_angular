@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth; // no funciono
+}
+
+/*body{
+    font-family: 'Indie Flower';
+}*/
+
+
+//-------------------------------------------------------
+//-------------------------------------------------------
+//------------------------ SECCIONES --------------------
+section {
+    height: 770px;
+    display:flex;
+    justify-content: space-evenly;
+    padding: 0px 40px;
+    align-items: center;
+    
+}
+
+section h2{
+    font-size: 50px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+section p{
+    font-weight: 100;
+    margin-bottom: 15px;
+}
+
+//boton a de las secciones 
+section a {
+    display: inline-block;
+    padding:  10px 0;
+    color: #452873;
+    text-decoration: none;
+    width: 200px;
+    text-align: center;
+    border: 1px solid #ffffff10;
+    border-radius: 50px;
+    background: #fff;
+}
+
+section img{
+    height: 300px;
+}
+
+//----------------------------
+// este estilo es para dar color a las secciones , a las 3 secciones
+section:nth-child(1){
+    background-image: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%);
+}
+
+section:nth-child(2){
+    background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+}
+
+
+section:nth-child(3){
+    background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
+}
+
+section:nth-child(4){
+background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+}
+
+//---------------------------------------------
+@media screen and (max-width:800px){
+    section{
+        //flex-direction: column-reverse;
+        //justify-content: center;
+    }
+    section > img {
+        height: 50px;
+    }
+
+}
+@media screen and (max-width:375px){
+    
+    section > img{
+        height: 50px;
+    }
+    section > p {
+        padding-left: 30px;
+    }
+}
