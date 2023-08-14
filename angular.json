@@ -125,8 +125,8 @@
       }
     }
   },
-  "defaultProject": "conacci",
   "cli": {
+    "defaultProject": "conacci",
     "analytics": "f3ca6a70-7308-4793-bf7c-abf8842fa3ee"
   }
 }

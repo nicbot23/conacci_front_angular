@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { RouterModule } from '@angular/router';\nconst appRoutes = [];\n/*@NgModule({\n  imports: [RouterModule.forRoot(routes)],\n  exports: [RouterModule]\n})*/\nexport const APP_ROUTES = RouterModule.forRoot(appRoutes, {\n  useHash: true\n});","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}
